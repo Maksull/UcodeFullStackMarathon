@@ -1,0 +1,36 @@
+#main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items {
+  margin: 5px;
+}
+
+.items:hover {
+  box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+span.degrees {
+  color: black;
+  font-family: "Lato Regular";
+  font-size: 2em;
+}
+
+span.date {
+  background-color: #4095b5;
+  color: white;
+  font-family: "Lato Bold";
+  font-size: 1.5em;
+}
+
+img {
+  width: 200px;
+}

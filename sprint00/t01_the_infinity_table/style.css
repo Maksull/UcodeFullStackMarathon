@@ -1,0 +1,41 @@
+img {
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+}
+thead {
+  background-color: black;
+  color: white;
+}
+
+tr {
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+}
+
+#SoulStone {
+  background-color: orange;
+}
+
+#TimeStone {
+  background-color: green;
+}
+
+#SpaceStone {
+  background-color: blue;
+}
+
+#MindStone {
+  background-color: yellow;
+}
+
+#RealityStone {
+  background-color: red;
+}
+
+#PowerStone {
+  background-color: purple;
+}

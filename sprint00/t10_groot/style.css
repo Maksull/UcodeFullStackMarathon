@@ -1,0 +1,50 @@
+h1 {
+  margin-left: 30px;
+  padding-bottom: 50px;
+}
+
+.box {
+  width: calc(100% - 200px);
+  background-color: #dddddd;
+  position: relative;
+  margin: auto;
+  padding: 25px;
+}
+
+.box::before {
+  width: calc(100% + 75px);
+  height: 100%;
+  position: absolute;
+  content: "";
+
+  left: -40px;
+  right: 40px;
+  top: -1px;
+
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: black;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.box::after {
+  width: 100%;
+  height: calc(100% + 75px);
+  position: absolute;
+  content: "";
+
+  top: -40px;
+  bottom: 40px;
+  right: -1px;
+
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: black;
+
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: black;
+}

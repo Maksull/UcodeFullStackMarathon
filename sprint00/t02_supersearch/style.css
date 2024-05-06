@@ -1,0 +1,21 @@
+form {
+  display: flex;
+}
+
+#find {
+  color: green;
+}
+
+#find:hover {
+  color: red;
+}
+
+#Text {
+  color: green;
+  height: 2em;
+  width: 100%;
+}
+
+#Text:hover {
+  color: red;
+}

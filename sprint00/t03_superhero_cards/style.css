@@ -1,0 +1,57 @@
+img {
+  float: left;
+  margin-top: -42px;
+  position: relative;
+  height: 182px;
+}
+img#spd {
+  float: left;
+  margin-top: -20px;
+  position: relative;
+  height: 182px;
+}
+.card {
+  padding-top: 10px;
+  margin: 40px;
+  margin-left: 20px;
+  width: 270px;
+  height: 140px;
+  border-radius: 5px;
+  font-family: Verdana;
+  float: left;
+}
+
+.card#CaptainAmerica {
+  background: linear-gradient(180deg, blue 0%, #b06ab3 100%);
+}
+
+.card#IronMan {
+  background: linear-gradient(180deg, red 0%, #b31217 100%);
+}
+
+.card#BlackWidow {
+  background: linear-gradient(180deg, black 0%, #61045f 100%);
+}
+
+.card#SpiderMan {
+  background: linear-gradient(180deg, red 0%, black 100%);
+}
+
+.title {
+  font-family: Verdana;
+  margin-right: 10px;
+  float: right;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.desc {
+  font-family: Verdana;
+  float: right;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 9px;
+  text-align: right;
+}
