@@ -1,0 +1,11 @@
+img {
+  width: 100px;
+}
+
+img.gunlet {
+  width: 200px;
+}
+
+.gunlet:hover + table td.person {
+  visibility: hidden;
+}

@@ -1,0 +1,126 @@
+#title {
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+h1 {
+  background-color: #ed1d25;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#menu-div {
+  width: 70%;
+  margin-left: 15%;
+}
+
+#menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  left: 1%;
+  width: 99%;
+  top: 100%;
+  box-shadow: 3.5px 3.5px 5px black;
+  background-color: #d3d3d3;
+}
+
+#menu li:hover > * {
+  display: block;
+}
+
+#menu li {
+  position: relative;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+#menu ul ul {
+  position: absolute;
+  left: 100%;
+  width: 50%;
+  top: 0;
+}
+
+* html #menu li a {
+  display: inline-block;
+}
+
+#menu > li {
+  width: 50%;
+}
+
+body:first-of-type #menu {
+  display: inline-table;
+}
+
+body:first-of-type #menu > li {
+  display: table-cell;
+  float: none;
+}
+
+#menu a {
+  display: block;
+  font: 20px sans-serif;
+  color: black;
+  cursor: pointer;
+  padding: 20px;
+  background-color: #d3d3d3;
+}
+
+#menu ul li {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+
+#menu ul a {
+  text-align: left;
+  padding: 20px;
+  text-align: left;
+  background-color: #d3d3d3;
+  font: 20px sans-serif;
+  color: black;
+}
+
+#menu li:hover > a,
+#menu li a.pressed {
+  background-color: #ed1d25;
+  color: black;
+  text-shadow: #fff 0 0 1px;
+}
+
+#menu span {
+  display: block;
+  overflow: visible;
+}
+
+#menu ul span {
+  text-align: left;
+}
+
+#menu li:hover > a,
+#menu li > a.pressed {
+  background-color: #ed1d25;
+  color: black;
+  text-shadow: white 0 0 1px;
+}
+
+#menu ul li:hover > a,
+#menu ul li > a.pressed {
+  background-color: #ed1d25;
+  color: white;
+}
