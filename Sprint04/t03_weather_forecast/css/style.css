@@ -1,0 +1,21 @@
+body {
+  background-image: url("../assets/images/kh.jpg");
+  background-size: cover;
+}
+
+.forecast {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+.forecast-row {
+  flex: 0 0 auto;
+  width: 200px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

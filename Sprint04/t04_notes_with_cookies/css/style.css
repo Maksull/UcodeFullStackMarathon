@@ -1,0 +1,55 @@
+body {
+  padding: 10% 20%;
+  background-color: lightgrey;
+}
+
+.input {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input input {
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+}
+
+.input input[type="reset"] {
+  background-color: #65cecb;
+  color: white;
+}
+
+.input input[type="submit"] {
+  background-color: #f0f0f0;
+}
+
+.text,
+.history {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  margin: 2% 0;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.text span,
+.history span {
+  font-weight: 400;
+  font-size: 1em;
+  text-align: start;
+  margin-bottom: 2%;
+  color: rgb(70, 168, 255);
+}
+
+#output {
+  font-size: 0.8em;
+  background: white;
+  padding: 5px;
+  width: 100%;
+  border-radius: 7px;
+}
+
+#cookieTextInput {
+  border: 2px solid #65cecb;
+}

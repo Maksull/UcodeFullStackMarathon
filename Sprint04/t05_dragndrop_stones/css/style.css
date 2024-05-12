@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+}
+
+.stones {
+  float: left;
+  position: absolute;
+  height: 60px;
+  top: 15%;
+  width: 60px;
+  margin: 10px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.stones[value="off"] {
+  border: 2px dashed grey;
+}
+
+#reality {
+  left: 2%;
+  background-color: red;
+}
+
+#time {
+  left: 10%;
+  background-color: green;
+}
+
+#space {
+  left: 20%;
+  background-color: blue;
+}
+
+#mind {
+  left: 30%;
+  background-color: yellow;
+}
+
+#soul {
+  left: 40%;
+  background-color: orange;
+}
+
+#power {
+  left: 50%;
+  background-color: purple;
+}

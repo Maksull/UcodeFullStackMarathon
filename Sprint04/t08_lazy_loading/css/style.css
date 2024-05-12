@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+}
+
+.info {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.info label {
+  background: rgba(255, 0, 0, 0.7);
+  padding: 0.8%;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+
+label.finish {
+  background: lightgreen;
+}
+
+.images {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.images div {
+  display: flex;
+  margin-top: 2%;
+}

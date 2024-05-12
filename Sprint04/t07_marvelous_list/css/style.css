@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.list .element {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #97b3da;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.list .element:hover {
+  background-color: #7388b0;
+}
+
+.info {
+  width: 70%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info .data {
+  width: 50%;
+}
+
+.info .data {
+  float: left;
+}
+
+.info .image {
+  width: 50%;
+}
+
+.info .image {
+  float: right;
+}
+
+.info .data h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.data div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.data div label {
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #97b3da;
+  color: white;
+  border-radius: 5px;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+.info .image img {
+  width: 100%;
+  border-radius: 10px;
+}
