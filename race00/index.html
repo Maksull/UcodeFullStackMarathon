@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>Anonymous Calculator</h1>
+        <div class="calc-container">
+            <div class="output">
+                <div class="operation">
+                    <div class="value"></div>
+                </div>
+                <div class="result">
+                    <div class="value">0</div>
+                </div>
+            </div>
+            <div class="input">
+                <div class="column">
+                    <div class="row">
+                        <button id="rad" class="active-angle">Rad</button>
+                        <button id="deg">Deg</button>
+                        <button id="pi" class="function-button">π</button>
+                        <button id="e" class="function-button">e</button>
+                    </div>
+                    <div class="row">
+                        <button id="cos" class="function-button">cos</button>
+                        <button id="sin" class="function-button">sin</button>
+                        <button id="tan" class="function-button">tan</button>
+                    </div>
+                    <div class="row">
+                        <button id="exp" class="function-button">exp</button>
+                        <button id="ln" class="function-button">ln</button>
+                        <button id="log" class="function-button">log</button>
+                    </div>
+                    <div class="row">
+                        <button id="factorial" class="function-button">×!</button>
+                        <button id="power" class="function-button">x<span>y</span></button>
+                        <button id="square" class="function-button">x²</button>
+                        
+                    </div>
+                    <div class="row">
+                        <button id="square-root" class="function-button">√</button>
+                        <button id="percent" class="function-button">%</button>
+                        <button id="toggle-sign" class="control-button">+/-</button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="row">
+                        <button id="open-parenthesis" class="function-button">(</button>
+                        <button id="close-parenthesis" class="function-button">)</button>
+                        <button id="clear" class="control-button">C</button>
+                        <button id="delete" class="control-button">⌫</button>
+                    </div>
+                    <div class="row">
+                        <button id="7" class="number-button">7</button>
+                        <button id="8" class="number-button">8</button>
+                        <button id="9" class="number-button">9</button>
+                        <button id="division" class="operator-button">÷</button>
+                    </div>
+                    <div class="row">
+                        <button id="4" class="number-button">4</button>
+                        <button id="5" class="number-button">5</button>
+                        <button id="6" class="number-button">6</button>
+                        <button id="multiplication" class="operator-button">×</button>
+                    </div>
+                    <div class="row">
+                        <button id="1" class="number-button">1</button>
+                        <button id="2" class="number-button">2</button>
+                        <button id="3" class="number-button">3</button>
+                        <button id="subtraction" class="operator-button">–</button>
+                    </div>
+                    <div class="row">
+                        <button id="0" class="number-button">0</button>
+                        <button id="comma" class="number-button">.</button>
+                        <button id="calculate" class="equal-button">=</button>
+                        <button id="addition" class="operator-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
