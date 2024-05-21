@@ -26,7 +26,7 @@ const calculatorButtons = [
     { name: "4", symbol: 4, formula: 4, type: "number" },
     { name: "5", symbol: 5, formula: 5, type: "number" },
     { name: "6", symbol: 6, formula: 6, type: "number" },
-    { name: "multiplication", symbol: "x", formula: "*", type: "operator" },
+    { name: "multiplication", symbol: "×", formula: "*", type: "operator" },
     { name: "factorial", symbol: "x!", formula: "FACTORIAL(", type: "math_function" },
     { name: "exp", symbol: "exp", formula: "Math.exp", type: "math_function" },
     { name: "ln", symbol: "ln", formula: "Math.log", type: "math_function" },
@@ -35,7 +35,7 @@ const calculatorButtons = [
     { name: "2", symbol: 2, formula: 2, type: "number" },
     { name: "3", symbol: 3, formula: 3, type: "number" },
     { name: "subtraction", symbol: "-", formula: "-", type: "operator" },
-    { name: "power", symbol: "x<span>y</span>", formula: "POWER(", type: "math_function" },
+    { name: "power", symbol: "x<sup>y</sup>", formula: "POWER(", type: "math_function" },
     { name: "percent", symbol: "%", formula: "/100", type: "number" },
     { name: "comma", symbol: ".", formula: ".", type: "number" },
     { name: "0", symbol: 0, formula: 0, type: "number" },
@@ -158,10 +158,11 @@ function calculateResult() {
         }
     }
 
+    history.push(data.operation.toString().replace(/,/g, '') + ' = ' + result);
+    data.formula = [data.operation.toString().replace(/,/g, '')];
     data.operation = [result];
-    data.formula = [result];
+    updateFormula(data.formula.toString())
     updateResult(result);
-    history.push(formulaStr + ' = ' + result);
     updateHistory();
 }
 
@@ -278,8 +279,12 @@ function toggleSign() {
 
 function updateResult(result) {
     document.querySelector(".result .value").innerHTML = result;
-    data.operation = [result];
+    data.operation = [data.operation.toString().replace(/,/g, '')];
     data.formula = [result];
+}
+
+function updateFormula(formula) {
+    document.querySelector(".operation .value").innerHTML = formula;
 }
 
 // Add a new function to update the calculation history
