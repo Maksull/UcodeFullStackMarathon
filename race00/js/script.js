@@ -283,7 +283,7 @@ function updateResult(result) {
     data.formula = [result];
 }
 
-function updateFormula(formula){
+function updateFormula(formula) {
     document.querySelector(".operation .value").innerHTML = formula;
 }
 

@@ -47,12 +47,14 @@ h1 {
     color: #333333;
 }
 
-.operation, .result {
+.operation,
+.result {
     text-align: end;
     width: 100%;
 }
 
-.operation .value, .result .value {
+.operation .value,
+.result .value {
     font-size: 1em;
 }
 
@@ -92,7 +94,9 @@ h1 {
     height: 60px;
 }
 
-#rad, #deg, .cell{
+#rad,
+#deg,
+.cell {
     grid-column: span 2;
 }
 
@@ -117,16 +121,22 @@ button {
     color: #333333;
 }
 
-.number-button:hover{
+.number-button:hover {
     background-color: #c5e5fc;
 }
 
-.operator-button, .function-button, .control-button, .equal-button {
+.operator-button,
+.function-button,
+.control-button,
+.equal-button {
     background-color: #ff9ff3;
     color: #333333;
 }
 
-.operator-button:hover, .function-button:hover, .control-button:hover, .equal-button:hover {
+.operator-button:hover,
+.function-button:hover,
+.control-button:hover,
+.equal-button:hover {
     background-color: #ff7be0;
 }
 
@@ -151,7 +161,7 @@ button span {
 .history {
     background-color: #ffffff;
     padding: 20px;
-    margin-left:10px;
+    margin-left: 10px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     min-width: 300px;
