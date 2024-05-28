@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What about forms?</title>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>Avengers Quiz</h1>
+        <form id="quiz-form">
+            <div class="quiz-question" id="question1">
+                <p>What did Thanos have to do to get the Soul Stone?</p>
+                <input type="radio" id="q1-option1" name="q1-answer" value="1">
+                <label for="q1-option1">Fight the Red Skull</label><br>
+                <input type="radio" id="q1-option2" name="q1-answer" value="2">
+                <label for="q1-option2">Destroy the Mind Stone</label><br>
+                <input type="radio" id="q1-option3" name="q1-answer" value="3">
+                <label for="q1-option3">Sacrifice Gamora</label><br>
+                <input type="radio" id="q1-option4" name="q1-answer" value="4">
+                <label for="q1-option4">Travel to Vormir</label><br><br>
+                <button type="button" onclick="nextQuestion(1)">Next</button>
+            </div>
+            <div class="quiz-question" id="question2" style="display: none;">
+                <p>Who is the leader of the Avengers?</p>
+                <input type="radio" id="q2-option1" name="q2-answer" value="1">
+                <label for="q2-option1">Iron Man</label><br>
+                <input type="radio" id="q2-option2" name="q2-answer" value="2">
+                <label for="q2-option2">Thor</label><br>
+                <input type="radio" id="q2-option3" name="q2-answer" value="3">
+                <label for="q2-option3">Hulk</label><br>
+                <input type="radio" id="q2-option4" name="q2-answer" value="4">
+                <label for="q2-option4">Captain America</label><br><br>
+                <button type="button" onclick="previousQuestion(2)">Previous</button>
+                <button type="button" onclick="nextQuestion(2)">Next</button>
+            </div>
+            <div class="quiz-question" id="question3" style="display: none;">
+                <p>What is the name of Thor’s hammer?</p>
+                <input type="radio" id="q3-option1" name="q3-answer" value="1">
+                <label for="q3-option1">Stormbreaker</label><br>
+                <input type="radio" id="q3-option2" name="q3-answer" value="2">
+                <label for="q3-option2">Mjolnir</label><br>
+                <input type="radio" id="q3-option3" name="q3-answer" value="3">
+                <label for="q3-option3">Gungnir</label><br>
+                <input type="radio" id="q3-option4" name="q3-answer" value="4">
+                <label for="q3-option4">Jarnbjorn</label><br><br>
+                <button type="button" onclick="previousQuestion(3)">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+form {
+    border-width: 2px;
+    border-style: solid;
+    border-color: gray;
+    padding: 20px;
+}
+
+fieldset {
+    border-width: 2px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.art {
+    background-color: #c0c0c0;
+}
