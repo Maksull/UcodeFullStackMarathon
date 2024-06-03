@@ -1,0 +1,39 @@
+.wrapper {
+	margin-top: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.box {
+	margin: 5px;
+	background: gray;
+	padding: 10px;
+	border: 1px solid rgb(216, 31, 31);
+	width: auto;
+}
+
+.name__object {
+	color: #1ea7c5;
+}
+
+.parent__color {
+	color: #ffffff;
+}
+
+.value {
+	color: #616b25;
+}
+
+.parent {
+	margin: 10px;
+	background: #2b2e31;
+}
+
+.child {
+	background: #191924;
+}
+
+button {
+	cursor: pointer;
+}

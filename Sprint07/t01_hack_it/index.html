@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:thjs="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hack it!</title>
+	<style>
+		.good {
+			color: green;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Password</h1>
+	<form action="/" method="post">
+		<p class="good" thjs:text="${answer}"></p>
+		<p>Password not saved at session.</p>
+		<p>
+			<label>Password for saving to session</label>
+			<input required placeholder="Password to session" type="text" id="password" name="pass">
+		</p>
+		<p>
+			<label>Salt for saving to session</label>
+			<input required placeholder="Salt to session" type="text" id="salt" name="salt" />
+		</p>
+		<button>Save</button>
+	</form>
+</body>
+
+</html>

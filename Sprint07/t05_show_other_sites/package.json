@@ -1,0 +1,12 @@
+{
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "express-thymeleaf": "^0.3.0",
+    "got": "^14.3.0",
+    "thymeleaf": "^0.18.1"
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title thjs:text="${title}"></title>
+</head>
+
+<body>
+  <h1>Session for new</h1>
+  <p id="name">name: <span thjs:text="${dateUser.name}"></span></p>
+  <p id="alias">alias: <span thjs:text="${dateUser.alias}"></span></p>
+  <p id="age">age: <span thjs:text="${dateUser.age}"></span></p>
+  <p id="description">description: <span thjs:text="${dateUser.description}"></span> </p>
+  <p id="photo">photo: <span thjs:text="${dateUser.photo}"></span></p>
+  <p id="experience">expirience: <span thjs:text="${dateUser.experience}"></span> </p>
+  <p id="level">level: <span thjs:text="${dateUser.level}"></span></p>
+  <p id="purpose">purpose: <span thjs:text="${dateUser.purpose}"></span></p>
+  <fieldset>
+    <form action="session" method="post">
+      <button>FORGET</button>
+    </form>
+  </fieldset>
+</body>
+
+</html>

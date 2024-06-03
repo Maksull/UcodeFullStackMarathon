@@ -1,0 +1,3 @@
+class NotePad {
+    constructor() { }
+}
