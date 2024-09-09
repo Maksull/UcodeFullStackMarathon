@@ -1,0 +1,23 @@
+body {
+	background-color: rgb(54, 58, 62);
+}
+
+.hover:hover {
+	background: transparent;
+	color: white;
+}
+
+.wrap__form {
+	margin: 0 auto;
+	width: 50%;
+	margin-top: 100px;
+}
+
+.login__input {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.button__login {
+	margin-top: 20px;
+}
