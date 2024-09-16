@@ -21,19 +21,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function coinFlip() {
-        return new Promise(resolve => {
-            let coin = document.getElementById("coin");
-            let coinResult = document.getElementById("coin-result");
-            let flipResult = Math.random();
+        return new Promise((resolve) => {
+            const coin = document.getElementById("coin");
+            const coinResult = document.getElementById("coin-result");
+            const flipResult = Math.random() < 0.5 ? 'heads' : 'tails';  // Determine heads or tails
 
-            coin.style.transform = `rotateY(${flipResult < 0.5 ? 1800 : 1980}deg)`;
-            coin.className = flipResult < 0.5 ? "heads" : "tails";
+            // Remove any previous result classes
+            coin.classList.remove('heads', 'tails');
+
+            // Reset the transform first to avoid conflicts with subsequent animations
+            coin.style.transform = 'rotateY(0deg)';
+
+            // Trigger a repaint to ensure the reset is applied immediately
+            void coin.offsetWidth;
+
+            // Set new class and transform for the flip
+            const rotationDegrees = flipResult === 'heads' ? 1800 : 1980;  // Heads: 1800deg, Tails: 1980deg
+            coin.style.transform = `rotateY(${rotationDegrees}deg)`;
+            coin.classList.add(flipResult);  // Add either 'heads' or 'tails' class for styling
 
             setTimeout(() => {
-                coinResult.textContent = flipResult < 0.5 ? "Heads - Player goes first!" : "Tails - AI goes first!";
-                isPlayerTurn = flipResult < 0.5;
+                // Display the result after the animation ends
+                coinResult.textContent = flipResult === 'heads'
+                    ? "Heads - Player goes first!"
+                    : "Tails - AI goes first!";
+                isPlayerTurn = flipResult === 'heads';  // Set player turn based on the result
                 resolve();
-            }, 1500);
+            }, 1500);  // 1.5 seconds delay for the animation to complete
         });
     }
 
