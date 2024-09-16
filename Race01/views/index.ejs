@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Battle</title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <script src="/js/game.js"></script>
+</head>
+
+<body>
+    <h1>
+        <%= user.username %> vs
+            <%= ai.username %> Card Battle
+    </h1>
+
+    <div id="timer">Time Left: 30</div> <!-- Timer Display -->
+
+    <!-- Coin flip container -->
+    <div id="coin-flip-container">
+        <div id="coin"></div>
+        <div id="coin-result"></div>
+    </div>
+
+    <div id="game-container">
+        <!-- Player Area -->
+        <div id="player-area">
+            <div class="player-info">
+                <img src="<%= user.avatar %>" alt="Player Avatar" class="avatar">
+                <div class="player-details">
+                    <h2>
+                        <%= user.username %>
+                    </h2>
+                    <div id="player-health">Player Health: 20</div>
+                    <div id="player-points">Points: 10</div>
+                </div>
+            </div>
+
+            <h3>Your Hand:</h3>
+            <div id="player-hand">
+                <% playerCards.forEach(card=> { %>
+                    <button class="card" data-id="<%= card.id %>" data-name="<%= card.name %>"
+                        data-attack="<%= card.attack %>" data-defense="<%= card.defense %>"
+                        data-cost="<%= card.cost %>">
+                        <%= card.name %> (ATK: <%= card.attack %>, DEF: <%= card.defense %>, COST: <%= card.cost %>)
+                    </button>
+                    <% }) %>
+            </div>
+            <h3>Your Board:</h3>
+            <div id="player-board"></div>
+            <button id="end-turn-button">End Turn</button>
+        </div>
+
+        <!-- AI Area -->
+        <div id="ai-area">
+            <div class="ai-info">
+                <img src="<%= ai.avatar %>" alt="AI Avatar" class="avatar">
+                <div class="ai-details">
+                    <h2>
+                        <%= ai.username %>
+                    </h2>
+                    <div id="ai-health">AI Health: 20</div>
+                    <div id="ai-points">Points: 10</div>
+                </div>
+            </div>
+
+            <h3>AI's Hand:</h3>
+            <div id="ai-hand">
+                <% aiCards.forEach(card=> { %>
+                    <div class="card" data-id="<%= card.id %>" data-name="<%= card.name %>"
+                        data-attack="<%= card.attack %>" data-defense="<%= card.defense %>"
+                        data-cost="<%= card.cost %>">
+                        <%= card.name %> (ATK: <%= card.attack %>, DEF: <%= card.defense %>, COST: <%= card.cost %>)
+                    </div>
+                    <% }) %>
+            </div>
+            <h3>AI's Board:</h3>
+            <div id="ai-board"></div>
+        </div>
+    </div>
+
+    <!-- Game Log -->
+    <div id="game-log">
+        <h3>Game Log:</h3>
+        <div id="log-messages"></div>
+    </div>
+
+    <!-- Battle History -->
+    <div id="battle-history">
+        <h3>Your Battle History</h3>
+        <ul>
+            <% if (battleHistory.length> 0) { %>
+                <% battleHistory.forEach(battle=> { %>
+                    <li>
+                        <%= battle.timestamp %> - <%= battle.result==='win' ? 'Won' : 'Lost' %>
+                    </li>
+                    <% }) %>
+                        <% } else { %>
+                            <li>No previous battles.</li>
+                            <% } %>
+        </ul>
+    </div>
+
+</body>
+
+</html>

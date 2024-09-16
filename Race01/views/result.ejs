@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e272e;
+            color: #ecf0f1;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .game-over-container {
+            text-align: center;
+            background-color: #2f3640;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .game-over-container h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #e74c3c;
+        }
+
+        .game-over-container p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #ecf0f1;
+        }
+
+        .game-over-container a {
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .game-over-container a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-over-container">
+        <h1>Game Over!</h1>
+        <p>
+            <%= winner %> has won the game!
+        </p>
+        <a href="/">Play Again</a>
+    </div>
+</body>
+
+</html>
