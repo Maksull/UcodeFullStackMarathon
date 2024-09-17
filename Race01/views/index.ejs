@@ -27,29 +27,37 @@
         <!-- Player Area -->
         <div id="player-area">
             <div class="player-info">
-                <img src="<%= user.avatar %>" alt="Player Avatar" class="avatar">
-                <div class="player-details">
-                    <h2>
-                        <%= user.username %>
-                    </h2>
-                    <div id="player-health">Player Health: 20</div>
-                    <div id="player-points">Points: 10</div>
+                <div class="player-info-content">
+                    <img src="<%= user.avatar %>" alt="Player Avatar" class="avatar">
+                    <div class="player-details">
+                        <h2><%= user.username %></h2>
+                        <div id="player-health">Player Health: 20</div>
+                        <div id="player-points">Points: 10</div>
+                    </div>
                 </div>
+                <button id="end-turn-button">End Turn</button>
             </div>
+            
 
             <h3>Your Hand:</h3>
             <div id="player-hand">
                 <% playerCards.forEach(card=> { %>
-                    <button class="card" data-id="<%= card.id %>" data-name="<%= card.name %>"
-                        data-attack="<%= card.attack %>" data-defense="<%= card.defense %>"
-                        data-cost="<%= card.cost %>">
-                        <%= card.name %> (ATK: <%= card.attack %>, DEF: <%= card.defense %>, COST: <%= card.cost %>)
-                    </button>
+                    <div class="card players-card" data-id="<%= card.id %>" data-name="<%= card.name %>"
+                        data-attack="<%= card.attack %>" data-defense="<%= card.defense %>" data-cost="<%= card.cost %>"
+                        data-image="<%= card.image %>"  role="button">
+                        <img src="./img/<%= card.image %>" alt="<%= card.name %>" class="card-image"
+                            data-id="<%= card.id %>" data-name="<%= card.name %>" data-attack="<%= card.attack %>"
+                            data-defense="<%= card.defense %>" data-cost="<%= card.cost %>"
+                            data-image="<%= card.image %>">
+                        <%= card.name %> <br>
+                        ATK: <%= card.attack %><br>
+                        DEF: <%= card.defense %><br>
+                        COST: <%= card.cost %>
+                    </div>
                     <% }) %>
             </div>
             <h3>Your Board:</h3>
             <div id="player-board"></div>
-            <button id="end-turn-button">End Turn</button>
         </div>
 
         <!-- AI Area -->
@@ -69,9 +77,16 @@
             <div id="ai-hand">
                 <% aiCards.forEach(card=> { %>
                     <div class="card" data-id="<%= card.id %>" data-name="<%= card.name %>"
-                        data-attack="<%= card.attack %>" data-defense="<%= card.defense %>"
-                        data-cost="<%= card.cost %>">
-                        <%= card.name %> (ATK: <%= card.attack %>, DEF: <%= card.defense %>, COST: <%= card.cost %>)
+                        data-attack="<%= card.attack %>" data-defense="<%= card.defense %>" data-cost="<%= card.cost %>"
+                        data-image="<%= card.image %>">
+                        <img src="./img/<%= card.image %>" alt="<%= card.name %>" class="card-image"
+                            data-id="<%= card.id %>" data-name="<%= card.name %>" data-attack="<%= card.attack %>"
+                            data-defense="<%= card.defense %>" data-cost="<%= card.cost %>"
+                            data-image="<%= card.image %>">
+                            <%= card.name %><br>
+                            ATK: <%= card.attack %><br>
+                            DEF: <%= card.defense %><br>
+                            COST: <%= card.cost %>
                     </div>
                     <% }) %>
             </div>

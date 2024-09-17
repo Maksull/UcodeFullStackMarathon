@@ -1,4 +1,4 @@
-use ucode_web;
+use test1;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -21,27 +21,28 @@ CREATE TABLE cards (
     name VARCHAR(255) NOT NULL,
     attack INT NOT NULL,
     defense INT NOT NULL,
-    cost INT NOT NULL
+    cost INT NOT NULL,
+    image VARCHAR(255) NOT NULL
 );
 
-INSERT INTO cards (name, attack, defense, cost) VALUES
-    -> ('Goblin Scout', 2, 1, 1),
-    -> ('Elven Archer', 3, 2, 2),
-    -> ('Knight Errant', 4, 4, 3),
-    -> ('Fire Elemental', 5, 3, 4),
-    -> ('Frost Giant', 6, 6, 5),
-    -> ('Dragon Hatchling', 4, 3, 3),
-    -> ('Healing Fairy', 1, 2, 2),
-    -> ('Stone Golem', 3, 7, 4),
-    -> ('Shadow Assassin', 6, 2, 4),
-    -> ('Mermaid Enchantress', 3, 4, 3),
-    -> ('Centaur Warrior', 5, 5, 4),
-    -> ('Phoenix', 7, 4, 6),
-    -> ('Unicorn', 3, 5, 4),
-    -> ('Troll Berserker', 8, 2, 5),
-    -> ('Wizard Apprentice', 2, 3, 2),
-    -> ('Vampiric Bat', 3, 1, 2),
-    -> ('Earth Elemental', 4, 6, 4),
-    -> ('Spectral Knight', 5, 4, 4),
-    -> ('Celestial Guardian', 6, 7, 6),
-    -> ('Ancient Dragon', 10, 10, 10);
+INSERT INTO cards (name, attack, defense, cost, image) VALUES
+    ('Iron Man', 8, 6, 5, 'Iron_Man.png'),
+    ('Captain America', 7, 7, 4, 'Captain_America.jpg'),
+    ('Thor', 9, 8, 6, 'Thor.jpg'),
+    ('Hulk', 10, 10, 7, 'Hulk.jpg'),
+    ('Black Widow', 6, 5, 3, 'Black_Widow.jpg'),
+    ('Hawkeye', 5, 4, 3, 'Hawkeye.png'),
+    ('Spider-Man', 7, 6, 4, 'Spider_Man.png'),
+    ('Doctor Strange', 8, 5, 6, 'Doctor_Strange.jpg'),
+    ('Scarlet Witch', 9, 6, 6, 'Scarlet_Witch.jpg'),
+    ('Vision', 7, 7, 5, 'Vision.jpg'),
+    ('Black Panther', 8, 6, 5, 'Black_Panther.png'),
+    ('Ant-Man', 6, 5, 4, 'Ant_Man.jpg'),
+    ('Wasp', 5, 4, 3, 'Wasp.jpg'),
+    ('Captain Marvel', 9, 7, 6, 'Captain_Marvel.jpg'),
+    ('Winter Soldier', 7, 6, 5, 'Winter_Soldier.jpg'),
+    ('Falcon', 6, 5, 4, 'Falcon.jpg'),
+    ('War Machine', 8, 6, 5, 'War_Machine.jpg'),
+    ('Star-Lord', 7, 5, 4, 'Star_Lord.jpg'),
+    ('Gamora', 6, 5, 3, 'Gamora.jpg'),
+    ('Drax', 8, 7, 5, 'Drax.jpg');

@@ -36,7 +36,7 @@ app.use(
 // MySQL connection
 const db = mysql.createConnection({
     host: 'localhost',
-    port: 3306,
+    port: 3307,
     user: 'root',
     password: 'root',
     database: 'test1',
@@ -146,7 +146,6 @@ app.get('/', isAuthenticated, (req, res) => {
             db.query(battleHistoryQuery, [userId], (err, battleHistory) => {
                 if (err) throw err;
 
-                // Hard-code AI data here
                 const ai = {
                     username: 'AI',
                     avatar: '/uploads/default_ai_avatar.png' // Default avatar for AI
@@ -163,6 +162,7 @@ app.get('/', isAuthenticated, (req, res) => {
         });
     });
 });
+
 
 // Endpoint to get a new card for the player
 app.post('/draw-card', (req, res) => {

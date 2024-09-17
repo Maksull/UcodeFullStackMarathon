@@ -29,7 +29,6 @@
         .game-over-container h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            color: #e74c3c;
         }
 
         .game-over-container p {
@@ -56,11 +55,15 @@
 
 <body>
     <div class="game-over-container">
-        <h1>Game Over!</h1>
-        <p>
-            <%= winner %> has won the game!
-        </p>
-        <a href="/">Play Again</a>
+        <% if (winner==='Player' ) { %>
+            <h1 style="color: green;">Game Over!</h1>
+            <% } else if (winner==='AI' ) { %>
+                <h1 style="color: red;">Game Over!</h1>
+                <% } %>
+                    <p>
+                        <%= winner %> has won the game!
+                    </p>
+                    <a href="/">Play Again</a>
     </div>
 </body>
 

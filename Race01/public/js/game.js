@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function resetTimer() {
         clearInterval(timer);
-        timeLeft = 10;
+        timeLeft = 30;
         updateTimerDisplay();
 
         timer = setInterval(() => {
@@ -113,12 +113,17 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isPlayerTurn) return;
 
         let card = event.target;
+        // If the user clicks on the image or text inside the button, find the parent button element
+        if (card.tagName !== 'DIV') {
+            card = card.closest('div');
+        }
         let cardData = {
             id: card.dataset.id,
             name: card.dataset.name,
             attack: parseInt(card.dataset.attack),
             defense: parseInt(card.dataset.defense),
-            cost: parseInt(card.dataset.cost)
+            cost: parseInt(card.dataset.cost),
+            image: card.dataset.image
         };
 
         // Check if player has enough points to play the card
@@ -155,21 +160,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function createCardElement(card, isPlayerCard) {
-        let element = document.createElement(isPlayerCard ? "button" : "div");
+        let element = document.createElement("div");
         element.className = "card";
+        if (isPlayerCard) {
+            element.className = "card players-card";
+            element.addEventListener("click", playCard);
+        }
         element.dataset.id = card.id;
         element.dataset.name = card.name;
         element.dataset.attack = card.attack;
         element.dataset.defense = card.defense;
         element.dataset.cost = card.cost;
-        element.innerText = `${card.name} (ATK: ${card.attack}, DEF: ${card.defense}, COST: ${card.cost})`;
-
-        if (isPlayerCard) {
-            element.addEventListener("click", playCard);
-        }
-
+        element.dataset.image = card.image;
+    
+        // Create an image element
+        let img = document.createElement("img");
+        img.src = `./img/${card.image}`;
+        img.alt = card.name;
+        img.className = "card-image";
+    
+        // Create a text node for the card's name and stats
+        let text = document.createElement("div");
+        text.innerText = `${card.name} \n ATK: ${card.attack} \n DEF: ${card.defense} \n COST: ${card.cost}`;
+    
+        // Append the image and text to the button or div element
+        element.appendChild(img);
+        element.appendChild(text);
+    
+    
         return element;
     }
+    
 
     function endPlayerTurn() {
         clearInterval(timer);
@@ -210,7 +231,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     name: card.dataset.name,
                     attack: parseInt(card.dataset.attack),
                     defense: parseInt(card.dataset.defense),
-                    cost: cardCost
+                    cost: cardCost,
+                    image: card.dataset.image
                 };
 
                 playerCards.push(cardData);
@@ -259,7 +281,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 name: selectedCard.dataset.name,
                 attack: parseInt(selectedCard.dataset.attack),
                 defense: parseInt(selectedCard.dataset.defense),
-                cost: parseInt(selectedCard.dataset.cost)
+                cost: parseInt(selectedCard.dataset.cost),
+                image: selectedCard.dataset.image
             };
 
             // Play the card if AI has enough points
@@ -354,11 +377,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateBoard(boardId, cards) {
         let board = document.getElementById(boardId);
-        board.innerHTML = "";
-        cards.forEach((card, index) => {
-            board.innerHTML += `<div>${card.name} (ATK: ${card.attack}, DEF: ${card.defense}, COST: ${card.cost})</div>`;
+        board.innerHTML = ""; // Clear the current board
+    
+        cards.forEach(card => {
+            // Create a card element (similar to createCardElement)
+            let cardElement = document.createElement("div");
+            cardElement.className = "card";
+            cardElement.dataset.id = card.id;
+            cardElement.dataset.name = card.name;
+            cardElement.dataset.attack = card.attack;
+            cardElement.dataset.defense = card.defense;
+            cardElement.dataset.cost = card.cost;
+            cardElement.dataset.image = card.image;
+    
+            // Create an image element
+            let img = document.createElement("img");
+            img.src = `./img/${card.image}`;
+            img.alt = card.name;
+            img.className = "card-image";
+    
+            // Create a text node for the card's name and stats
+            let text = document.createElement("div");
+            text.innerText = `${card.name} \n ATK: ${card.attack} \n DEF: ${card.defense} \n COST: ${card.cost}`;
+    
+            // Append the image and text to the card element
+            cardElement.appendChild(img);
+            cardElement.appendChild(text);
+    
+            // Append the card element to the board
+            board.appendChild(cardElement);
         });
     }
+    
 
     function logMessage(message) {
         let logMessages = document.getElementById("log-messages");
